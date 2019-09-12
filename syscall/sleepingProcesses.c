@@ -12,7 +12,7 @@ int ret;
 
 /* Find the process */
 for_each_process(proces) {
-    if((long)proces->state == 1 || (long)proces->state == 2) //sleep
+    if((long)proces->state != 0) //sleep
     {
         /* Print the process info to the buffer */
 	    snprintf(kbuf, sizeof(kbuf), "Process: %s PID_Number: %ld\n", 
